@@ -29,8 +29,6 @@ namespace day2part2
                 //converts string character into a char
                 char charCharacter = char.Parse(stringCharacter);
                 
-                char[] chararry = stringCharacter.ToCharArray();
-                
                 //converts password to char array
                 char[] charArrayPassword = password.ToCharArray();
 
