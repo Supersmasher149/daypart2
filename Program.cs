@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 namespace day2part2
 {
     class Program
@@ -29,18 +28,25 @@ namespace day2part2
                 string stringCharacter = character[0];
                 //converts string character into a char
                 char charCharacter = char.Parse(stringCharacter);
-                //password already
-                char[] charPassword = password.ToCharArray(); 
+                //converts password to char array
+                char[] charArrayPassword = password.ToCharArray();
+                //converts char array into char
+                char charMinPassword = charArrayPassword[intMin];
+                //TODO sometimes the password is not as long as the maximum so it goes out of bounds of the array
+                char charMaxPassword = charArrayPassword[intMax];
+                Console.WriteLine(charMinPassword);
+                Console.WriteLine(charMinPassword);
+
+                //if ()
+                //{
+                //    truePasswords++;
+                //    //Console.WriteLine("true");
+                //}                
+                //else
+                //{
+                //    //Console.WriteLine("false");
+                //}
                 
-                if (charPassword[intMin] == charCharacter | charPassword[intMax] == charCharacter && ! charPassword[intMin] == charCharacter & charPassword[intMax])
-                {
-                    truePasswords++;
-                    Console.WriteLine("true");
-                }                
-                else
-                {
-                    Console.WriteLine("false");
-                }
             }
             Console.WriteLine(truePasswords);
         }
