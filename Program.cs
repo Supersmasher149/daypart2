@@ -26,28 +26,33 @@ namespace day2part2
                 int intMin = Int32.Parse(min[0]);
                 //converts character into a string
                 string stringCharacter = character[0];
+                
                 //converts string character into a char
                 char charCharacter = char.Parse(stringCharacter);
+                
+                char[] chararry = stringCharacter.ToCharArray();
+                
+                
                 //converts password to char array
                 char[] charArrayPassword = password.ToCharArray();
-                //converts char array into char
-                char charMinPassword = charArrayPassword[intMin];
+                //converts char array into car
+                //char charMinPassword = charArrayPassword[intMin - 1];
                 //TODO sometimes the password is not as long as the maximum so it goes out of bounds of the array
-                char charMaxPassword = charArrayPassword[intMax];
-                Console.WriteLine(charMinPassword);
-                Console.WriteLine(charMinPassword);
+                //char charMaxPassword = charArrayPassword[intMax - 1];
 
-                //if ()
-                //{
-                //    truePasswords++;
-                //    //Console.WriteLine("true");
-                //}                
-                //else
-                //{
-                //    //Console.WriteLine("false");
-                //}
-                
+                //Console.WriteLine($"{}");
+
+                if (charArrayPassword[intMin - 1] == charCharacter && charArrayPassword[intMax - 1] == charCharacter & ! charArrayPassword[intMin - 1] == charCharacter & charArrayPassword[intMax - 1] == charCharacter)
+                {
+                truePasswords++;
+                //Console.WriteLine("true");
             }
+                else
+            {
+                //Console.WriteLine("false");
+            }
+
+        }
             Console.WriteLine(truePasswords);
         }
     }
