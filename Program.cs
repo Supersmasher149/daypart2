@@ -7,7 +7,6 @@ namespace day2part2
         {
             int truePasswords = 0;
             string[] lines = System.IO.File.ReadAllLines(@"C:\Users\walte\source\repos\day2\TextFile1.txt");
-            //Console.WriteLine(lines[0]);
             
             for (int i = 0; i < lines.Length; i++)
             {
@@ -32,26 +31,16 @@ namespace day2part2
                 
                 char[] chararry = stringCharacter.ToCharArray();
                 
-                
                 //converts password to char array
                 char[] charArrayPassword = password.ToCharArray();
-                //converts char array into car
-                //char charMinPassword = charArrayPassword[intMin - 1];
-                //TODO sometimes the password is not as long as the maximum so it goes out of bounds of the array
-                //char charMaxPassword = charArrayPassword[intMax - 1];
 
-                //Console.WriteLine($"{}");
+                bool test = charArrayPassword[intMin - 1] == charCharacter | charArrayPassword[intMax - 1] == charCharacter;
+                bool test1 = charArrayPassword[intMin - 1] == charCharacter && charArrayPassword[intMax - 1] == charCharacter;
 
-                if (charArrayPassword[intMin - 1] == charCharacter && charArrayPassword[intMax - 1] == charCharacter & ! charArrayPassword[intMin - 1] == charCharacter & charArrayPassword[intMax - 1] == charCharacter)
+                if (test == true & ! test1)
                 {
                 truePasswords++;
-                //Console.WriteLine("true");
             }
-                else
-            {
-                //Console.WriteLine("false");
-            }
-
         }
             Console.WriteLine(truePasswords);
         }
